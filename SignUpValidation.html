@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Sign Up Form with Validation</title>
+</head>
+<body>
+    <form action="" method="post">
+        <table align="center" width="70%" cellspacing="2" cellpadding="2" border="5">
+            <tr>
+                <td colspan="2" align="center"><b>Sign Up Form with Validation</b></td>
+            </tr>
+            <tr>
+                <td align="left" valign="top">Email Id <span style="color:red">*</span></td>
+                <td> <input type="email" value="" name="emp_email" required>
+                <span style="color:red">It should accept email pattern</span>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Password <span style="color:red">*</span></td>
+                <td width="57%">
+                    <input type="password" value="" name="emp_pwd" placeholder="Type Number Only" maxlength="10" pattern="[1-9]+" required />
+                    <span style="color:red">It should accept number pattern only</span>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">First Name
+                    <span style="color:red">*</span>
+                </td>
+                <td width="57%">
+                    <input type="text" value="" name="emp_fname" maxlength="20"required>
+                    <span style="color:red">It should accept Character with max limit of 20</span>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Last Name</td>
+                <td width="57%">
+                    <input type="text" value="" name="emp_lname" maxlength="20">
+                </td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Employee DOB
+                    <span style="color:red">*</span>
+                </td>
+                <td width="57%">
+                    <input type="date" value="" name="emp_dob">
+                    <span style="color:red">It should accept  MM/DD/YYYY pattern only</span>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Age
+                    <span style="color:red">*</span>
+                </td>
+                <td width="57%">
+                    <input type="number" value="" name="emp_age" maxlength="20">
+                    <span style="color:red">Age should be between 18 to 60</span>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Address</td>
+                <td width="57%">
+                    <textarea rows="4" maxlength="200" name="emp_address" cols="20"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Contact Number 
+                    <span style="color:red">*</span>
+                </td>
+                <td width="57%">
+                    <input type="text" value="" id="emp_contact" maxlength="10">
+                    <span style="color:red">It should accept only 10 digits</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <p align="center">
+                        <input type="submit" value="Submit" name="BtnSubmit" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="reset" value="Reset All" name="BtnReset" />
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

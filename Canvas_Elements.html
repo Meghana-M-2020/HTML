@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Canvas Elements</title>
+</head>
+<body>
+    <table width="70%" border="3" align="center">
+        <tr>
+            <th colspan="3"><h2>Canvas Elements in HTML5</h2></th>
+        </tr>
+        <tr>
+            <th colspan="3"><b>Canvas</b></th>
+        </tr>
+        <tr>
+            <td width="20%">Drawing Shapes in Canvas</td>
+            <td width="20%">
+                <canvas id="CanvasShapes" name="CanvasShapes" width="200" height="100" style="border:2px solid #FF0000;"></canvas>
+            </td>
+            <td width="20%">
+                <b>
+                    var ctx=canvas.getContext("2d");</br>
+                    cx.fillStyle="#FFFF00";
+                    cx.fillRect(0,0,150,75);
+                </b>
+            </td>
+        </tr>
+        <tr>
+            <td>Drawing Coordinates in Canvas</td>
+            <td>
+                <canvas id="CanvasLine" name="CanvasLine" width="300" height="160" style="border:2px solid #FF0000;">
+            </td>
+            <td>
+                <b>
+                    var ctx=n.getContext("2d");</br>
+                    ctx.moveTo(0,0);<br />
+                    ctx.lineTo(500,265);
+                </b>
+            </td>
+        </tr>
+        <tr>
+            <td>Filling Gradients in Canvas</td>
+            <td>
+                <canvas id="CanvasGradients" width="200" height="100" style="border:1px solid #d3d3d3;">
+            </td>
+            <td>
+                <b>
+                    var grd=ctx.createLinearGradient(0,0,200,0)</br>
+                    grd.addColorStop(0,"pink);
+                    grd.addColorStop(1,"purple");
+                </b>
+            </td>
+        </tr>
+        <tr>
+            <td>Drawing text in Canvas</td>
+            <td>
+                <canvas id="CanvasText" width="370" height="100">
+            </td>
+            <td>
+                <b>
+                    var ctx=canvas.getContext("2d");</br>
+                    ctx.font = "30pxArial Black";
+                    ctx.fillText("Welcome to HTML5",10,50);
+                </b>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+
+        // Drawing Shapes in Canvas
+        var canvas = document.getElementById("CanvasShapes");
+        var ctx = canvas.getContext("2d");
+        cx.fillStyle = "#FFFF00";
+        cx.fillRect(0, 0, 150, 75);
+
+        //Drawing Coordinates in Canvas
+        var n = document.getElementById("CanvasLine");
+        var ctx = n.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(500, 265);
+        ctx.stroke();
+
+        //Fill with Gradients
+        var c = document.getElementById("CanvasGradients");
+        var ctx = c.getContext("2d");
+
+        //Create Gradients
+        var grd = ctx.createLinearGradient(0, 0, 200, 0)
+        grd.addColorStop(0, "pink");
+        grd.addColorStop(1, "purple");
+
+        // Fill with Gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 150, 80);
+
+        //Drawing Text in canvas
+        var canvas = document.getElementById("CanvasText");
+        var ctx = canvas.getContext("2d");
+        ctx.font = "30pxArial Black"
+        ctx.fillText("Welcome to HTML5", 10, 50);
+    </script>
+    <!-- Check as output is not what expected-->
+</body>
+</html>
